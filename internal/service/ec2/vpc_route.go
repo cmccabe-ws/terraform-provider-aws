@@ -151,7 +151,6 @@ func ResourceRoute() *schema.Resource {
 				Optional:     true,
 				ExactlyOneOf: routeValidTargets,
 				ConflictsWith: []string{
-					routeDestinationIPv6CIDRBlock, // IPv4 destinations only.
 					routeDestinationPrefixListID,  // "Cannot create or replace a prefix list route targeting a VPC Endpoint."
 				},
 			},
